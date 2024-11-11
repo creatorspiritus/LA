@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("Совет в обед")
+st.title(":streamlit: Совет в обед")
