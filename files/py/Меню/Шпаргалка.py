@@ -1,7 +1,9 @@
 import streamlit as st
 
 
-st.subheader("Шпаргалка", divider=True)
+st.subheader(f"Шпаргалка от \
+             {st.session_state.имя[0]}{st.session_state.фамилия[0]}", 
+             divider=True)
 
 """В этом разделе представлены элементы пакета :streamlit: streamlit.
 В начале каждого раздела представлено краткое описание элемена, затем
