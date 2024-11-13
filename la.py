@@ -1,5 +1,16 @@
 import streamlit as st
 
+st.set_page_config("Совет в обед", 
+page_icon="files/ico/DISg_colored.ico", menu_items={
+    'Get Help': 'https://dis-group.ru/',
+    'Report a bug': "https://data-innovations.ru/",
+    'About': """#### Совет в обед
+Разработано МК в 2024 году"""
+})
+
+st.logo(image="files/png/1_Data_Innovations_RU_grad.png", size="large",
+link="https://data-innovations.ru/", icon_image="files/ico/DISg_colored.ico")
+
 st.title(":streamlit: Совет в обед")
 # st.header("Шпаргалка", divider=True)
 # st.subheader("Новое в версии 1.40", divider=True)

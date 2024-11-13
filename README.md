@@ -4,3 +4,11 @@
 общим названием "Совет в обед".
 
 Программмный код добавляется в процессе выхода новых уроков.
+
+Установка всех зависимостей:
+
+```bash
+pip install -r requirements.txt
+```
+
+Ссылка на приложение в github: https://github.com/creatorspiritus/LA.git
