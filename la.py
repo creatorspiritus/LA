@@ -7,10 +7,12 @@ st.title(":streamlit: Совет в обед")
 # st.subheader("Применение переменных сессии `st.session_state`", divider=True)
 # """Зарезервировано"""
 
+if "фамилия" not in st.session_state: st.session_state.фамилия = "Котляров"
 
 МЕНЮ = st.navigation([
-    st.Page("files/py/Меню/Советы.py"),
-    st.Page("files/py/Меню/Шпаргалка.py")
+    st.Page("files/py/Меню/Советы.py", icon=":material/school:"),
+    st.Page("files/py/Меню/Шпаргалка.py", icon=":material/sticky_note_2:"),
+    st.Page("files/py/Меню/Код.py", icon=":material/code:")
 ])
 
 МЕНЮ.run()
