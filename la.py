@@ -14,6 +14,25 @@ st.logo(image="files/png/1_Data_Innovations_RU_grad.png",
 
 st.title(":streamlit: Совет в обед")
 
+# Новый код для Совета от 27 ноября 2024 года
+# Аутентификация пользователя
+
+# if not st.experimental_user.is_logged_in():
+#     st.warning("Пользователь не выполнил вход в приложение")
+# 
+# кнопка_google = st.button("Авторизация через Google", type="primary")
+# 
+# if кнопка_google:
+#     st.experimental_user.login(provider="google")
+# 
+# if st.experimental_user.is_logged_in():
+#     st.write(":sparkles: :rainbow[User data]")
+#     st.write(st.experimental_user)
+# 
+#     кнопка_logout = st.button("Выход")
+#     if кнопка_logout:
+#         st.experimental_user.logout()
+
 if "фамилия" not in st.session_state: st.session_state.фамилия = "Котляров"
 if "имя" not in st.session_state: st.session_state["имя"] = "Миша"
 
@@ -23,7 +42,6 @@ if "имя" not in st.session_state: st.session_state["имя"] = "Миша"
             icon=":material/sticky_note_2:"),
     st.Page("files/py/Меню/Код.py", icon=":material/code:")
 ])
-
 МЕНЮ.run()
 
 

@@ -59,5 +59,5 @@ st.session_state.имя = "Вася" # Стал Вася
     Ссылка на видеоурок: https://youtu.be/92jUAXBmZyU?list=TLGGYqrRVqMdT0wxMzExMjAyNA
     """
 
-# with st.expander("27 ноября 2024 года | Аутентификация пользователей", icon=":material/school:"):
-#     """Зарезервировано""" 
+with st.expander("27 ноября 2024 года | Аутентификация пользователей", icon=":material/school:"):
+    """Зарезервировано""" 
