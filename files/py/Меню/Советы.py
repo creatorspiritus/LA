@@ -61,3 +61,9 @@ st.session_state.имя = "Вася" # Стал Вася
 
 with st.expander("27 ноября 2024 года | Аутентификация пользователей", icon=":material/school:"):
     """Зарезервировано""" 
+
+    """
+    Streamlit Authenticator: https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/
+
+    Аутентификация через Google: https://github.com/kajarenc/stauthlib.git
+    """
