@@ -60,8 +60,11 @@ st.session_state.имя = "Вася" # Стал Вася
     """
 
 with st.expander("27 ноября 2024 года | Аутентификация пользователей", icon=":material/school:"):
-    """Зарезервировано""" 
 
+    with open("files/md/Streamlit Аутентификация без SSO.md", 'r', encoding='utf8') as файл:
+        текст =  файл.read()
+    
+    st.markdown(текст)
     """
     Streamlit Authenticator: https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/
 
