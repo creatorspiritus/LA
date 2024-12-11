@@ -38,6 +38,11 @@ with st.expander("`config.toml` - файл настройки приложени
     """Здесь указана команда перезапуска приложения после внесения
 изменений в код любого файла приложения и его последующего сохранения."""
 
+with st.expander("`secrets.toml` - файл для хранения ключей и других данных", 
+                 icon=":material/code:"):
+    with open(".streamlit/secrets.toml", 'r', encoding='utf8') as f: s = f.read()
+    st.code(s)
+    
 with st.expander("`requirements.txt` - необходимые пакеты", 
                  icon=":material/code:"):
     with open("requirements.txt", 'r', encoding='utf8') as f: t = f.read()

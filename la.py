@@ -44,4 +44,4 @@ if "имя" not in st.session_state: st.session_state["имя"] = "Миша"
 ])
 МЕНЮ.run()
 
-st.secrets["Фамилия"]["Котляров"]
+# st.secrets["Фамилия"]["Котляров"]

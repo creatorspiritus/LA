@@ -70,3 +70,15 @@ with st.expander("27 ноября 2024 года | Аутентификация �
 
     Аутентификация через Google: https://github.com/kajarenc/stauthlib.git
     """
+
+
+with st.expander("11 декабря 2024 года | Работа с базами данных", icon=":material/school:"):
+
+    with open("files/md/Работа с базами данных.md", 'r', encoding='utf8') as файл:
+        текст =  файл.read()
+    
+    st.markdown(текст)
+    """
+    Подключение к базам данных: https://docs.streamlit.io/develop/api-reference/connections
+
+    """
