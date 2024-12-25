@@ -55,4 +55,3 @@ if "КЖП" not in st.session_state:
 ])
 МЕНЮ.run()
 
-# st.secrets["Фамилия"]["Котляров"]
