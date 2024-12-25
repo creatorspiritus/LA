@@ -1,4 +1,5 @@
 import streamlit as st
+from datetime import timedelta
 
 st.set_page_config("Совет в обед", 
 page_icon="files/ico/DISg_colored.ico", menu_items={
@@ -33,14 +34,23 @@ st.title(":streamlit: Совет в обед")
 #     if кнопка_logout:
 #         st.experimental_user.logout()
 
-if "фамилия" not in st.session_state: st.session_state.фамилия = "Котляров"
-if "имя" not in st.session_state: st.session_state["имя"] = "Миша"
+if "фамилия" not in st.session_state: 
+    st.session_state.фамилия = "Котляров"
+if "имя" not in st.session_state: 
+    st.session_state["имя"] = "Миша"
+if "соединение" not in st.session_state: 
+    st.session_state.соединение = st.connection("la_sql", type="sql", ttl=0)
+if "КЖП" not in st.session_state: 
+    st.session_state.КЖП = st.session_state.соединение.query(
+        'select * from "Книга жалоб и предложений"', ttl=timedelta(minutes=0))
+
 
 МЕНЮ = st.navigation([
     st.Page("files/py/Меню/Советы.py", icon=":material/school:"),
     st.Page("files/py/Меню/Шпаргалка.py", 
             icon=":material/sticky_note_2:"),
-    st.Page("files/py/Меню/Код.py", icon=":material/code:")
+    st.Page("files/py/Меню/Код.py", icon=":material/code:"),
+    st.Page("files/py/Меню/КЖП.py", title="Книга жалоб и предложений", icon=":material/edit_square:")
 ])
 МЕНЮ.run()
 

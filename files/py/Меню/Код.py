@@ -23,6 +23,11 @@ with st.expander("`Советы.py` - файл советов",
     with open("files/py/Меню/Советы.py", 'r', encoding='utf8') as f: t = f.read()
     st.code(t)
 
+with st.expander("`КЖП.py` - файл для урока по подключению БД", 
+                 icon=":material/code:"):
+    with open("files/py/Меню/КЖП.py", 'r', encoding='utf8') as f: t = f.read()
+    st.code(t)
+
 with st.expander("`README.md` - файл описания приложения", 
                  icon=":material/code:"):
     "Код файла:"
