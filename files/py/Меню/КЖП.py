@@ -54,7 +54,7 @@ if справа.button("Добавить запись"):
 
 # таблица = st.session_state.соединение.query('select * from "Книга жалоб и предложений"')
 
-st.dataframe(st.session_state.КЖП, key="КЖП_таблица", hide_index=True, use_container_width=True)
+# st.dataframe(st.session_state.КЖП, key="КЖП_таблица", hide_index=True, use_container_width=True)
 
 for _ in st.session_state.КЖП.index:
     st.write(ЮДВ(st.session_state.КЖП.loc[_]["Дата и время"]))
