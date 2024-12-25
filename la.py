@@ -39,7 +39,8 @@ if "фамилия" not in st.session_state:
 if "имя" not in st.session_state: 
     st.session_state["имя"] = "Миша"
 if "соединение" not in st.session_state: 
-    st.session_state.соединение = st.connection("la_sql", type="sql", ttl=0)
+    st.session_state.соединение = st.connection("la_sql", type="sql", 
+        ttl=timedelta(minutes=0))
 if "КЖП" not in st.session_state: 
     st.session_state.КЖП = st.session_state.соединение.query(
         'select * from "Книга жалоб и предложений"', ttl=timedelta(minutes=0))
